@@ -7,16 +7,18 @@ plugins {
 
 android {
     compileSdk 31
-
     defaultConfig {
         applicationId "com.hamy.kwansoassiignment"
         minSdk 21
         targetSdk 31
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    buildFeatures{
+        viewBinding true
+    }
+
 
     buildTypes {
         release {
@@ -47,6 +49,7 @@ dependencies {
     //core routines
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2'
+
     // view model insatance helper lib
     implementation 'androidx.activity:activity-ktx:1.4.0'
     api 'androidx.fragment:fragment-ktx:1.4.0'

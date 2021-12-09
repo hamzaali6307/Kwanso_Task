@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UI.Activities.MainViewController">
+    tools:context=".ui.activities.MainViewController">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
@@ -12,16 +12,18 @@
         android:layout_height="match_parent" />
 
     <LinearLayout
-        android:padding="@dimen/_10sdp"
+        android:id="@+id/error_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
 
         <ImageView
             android:layout_width="@dimen/_100sdp"
             android:layout_height="@dimen/_80sdp"
+            android:contentDescription="@string/todo"
             android:src="@drawable/empty" />
 
         <TextView
@@ -41,21 +43,7 @@
             android:textSize="@dimen/_12sdp" />
 
     </LinearLayout>
-    <io.ak1.BubbleTabBar
-        android:layout_alignParentBottom="true"
-        android:id="@+id/bubbleTabBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/white"
-        android:elevation="16dp"
-        android:padding="@dimen/_5sdp"
-        app:bubbletab_menuResource="@menu/bottom_nav"
-        app:bubbletab_disabled_icon_color="@color/black"
-        app:bubbletab_horizontal_padding="@dimen/_15sdp"
-        app:bubbletab_icon_size="@dimen/_15sdp"
-        app:bubbletab_title_size="@dimen/_12ssp"
-        app:bubbletab_icon_padding="@dimen/_5sdp"
-        app:bubbletab_vertical_padding="@dimen/_8sdp"
-        app:bubbletab_tab_corner_radius="@dimen/_10sdp">
-    </io.ak1.BubbleTabBar>
+
+
+
 </RelativeLayout>

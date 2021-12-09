@@ -1,4 +1,4 @@
-package com.hamy.kwansoassiignment.Model
+package com.hamy.kwansoassiignment.model
 
 data class Grocery(
     var id: Int,

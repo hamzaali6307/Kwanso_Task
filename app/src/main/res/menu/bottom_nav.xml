@@ -7,7 +7,7 @@
         android:color="@color/home"/>
 
     <item
-        android:id="@+id/log"
+        android:id="@+id/all_list"
         android:icon="@drawable/all_list"
         android:title="@string/all_list"
         android:color="@color/logger"/>

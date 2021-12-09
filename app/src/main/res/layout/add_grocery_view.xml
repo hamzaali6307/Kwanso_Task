@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:padding="@dimen/_10sdp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:layout_width="match_parent"
+        android:src="@drawable/logo"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/icon_view"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txt_input_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:boxBackgroundColor="@android:color/holo_red_light"
+            app:boxStrokeErrorColor="@android:color/holo_red_light"
+            app:counterMaxLength="10"
+            app:errorIconDrawable="@drawable/ic_baseline_error_outline_24"
+            app:errorTextColor="@android:color/holo_red_light">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txt_input_editname"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:hint="@string/item_name"
+                android:maxLength="10"
+                android:textColor="@android:color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txt_input_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:boxBackgroundColor="@android:color/holo_red_light"
+            app:boxStrokeErrorColor="@android:color/holo_red_light"
+            app:counterMaxLength="5"
+            app:errorIconDrawable="@drawable/ic_baseline_error_outline_24"
+            app:errorTextColor="@android:color/holo_red_light">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txt_price_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:hint="@string/price"
+                android:inputType="number"
+                android:maxLength="10"
+                android:textColor="@android:color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_grocery"
+            android:padding="@dimen/_10sdp"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:text="@string/add_grocery"
+            android:textColor="@android:color/white"
+            app:backgroundTint="@null" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

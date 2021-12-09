@@ -9,15 +9,19 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.KwansoAssiignment">
-
         <activity
-            android:name=".UI.Activities.MainViewController"
+            android:name=".ui.activities.SplashActivityView"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activities.MainViewController"
+            android:exported="true">
+
         </activity>
     </application>
 

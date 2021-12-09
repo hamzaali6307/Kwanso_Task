@@ -1,10 +1,13 @@
-package com.hamy.kwansoassiignment.UI.Adapter
+package com.hamy.kwansoassiignment.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.hamy.kwansoassiignment.Model.Grocery
+import com.hamy.kwansoassiignment.model.Grocery
 import com.hamy.kwansoassiignment.databinding.ItemViewBinding
+import com.hamy.kwansoassiignment.utills.DiffUtills
+import com.hamy.kwansoassiignment.utills.Utility
 
 class ItemViewAdapter(
     var itemList: List<Grocery>,
@@ -20,11 +23,18 @@ class ItemViewAdapter(
         with(holder, {
             with(itemList[position], {
                 binding.itemName.text = this.itemName
-                binding.itemPrice.text = this.itemAmount.toString()
+                binding.itemPrice.text = """${this.itemAmount} PKR"""
+                binding.itemStatus.text = this.status
             })
         })
     }
     override fun getItemCount(): Int {
         return itemList.size
+    }
+    fun updateList(list: List<Grocery>) {
+        val diffCallback = DiffUtills(this.itemList, list)
+        val diffResult = DiffUtil.calculateDiff(diffCallback)
+        diffResult.dispatchUpdatesTo(this)
+        this.itemList = list
     }
 }

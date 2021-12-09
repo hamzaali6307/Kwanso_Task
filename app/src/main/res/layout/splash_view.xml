@@ -7,7 +7,7 @@
     android:gravity="center"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".UI.Fragment.SplashFragmentView">
+    tools:context=".ui.activities.SplashActivityView">
     <ImageView
         android:id="@+id/img_logo"
         android:src="@drawable/logo"

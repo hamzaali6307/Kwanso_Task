@@ -2,25 +2,39 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/splashFragmentView"
+    app:startDestination="@id/groceryListFragment"
     android:id="@+id/nav_graph">
 
 
     <fragment
         android:id="@+id/groceryListFragment"
-        android:name="com.hamy.kwansoassiignment.UI.Fragment.GroceryListFragmentView"
+        android:name="com.hamy.kwansoassiignment.ui.fragment.GroceryPendingListFragmentView"
         tools:layout="@layout/grocerylist_fragment_view"
         android:label="SplashView">
 
+        <action
+            android:id="@+id/action_groceryListFragment_to_addGroceryFragmentView"
+            app:destination="@id/addGroceryFragmentView" />
     </fragment>
     <fragment
-        android:id="@+id/splashFragmentView"
-        android:name="com.hamy.kwansoassiignment.UI.Fragment.SplashFragmentView"
-        android:label="splash_view"
-        tools:layout="@layout/splash_view" >
+        android:id="@+id/addGroceryFragmentView"
+        tools:layout="@layout/add_grocery_view"
+        android:name="com.hamy.kwansoassiignment.ui.fragment.AddGroceryFragmentView"
+        android:label="AddGroceryFragmentView" >
         <action
-            android:id="@+id/action_splashFragmentView_to_groceryListFragment"
+            android:id="@+id/action_addGroceryFragmentView_to_groceryListFragment"
             app:destination="@id/groceryListFragment" />
+
     </fragment>
+    <fragment
+        android:id="@+id/groceryAllListFragmentView"
+        tools:layout="@layout/grocerylist_fragment_view"
+        android:name="com.hamy.kwansoassiignment.ui.fragment.GroceryAllListFragmentView"
+        android:label="GroceryAllListFragmentView" >
+        <action
+            android:id="@+id/action_groceryAllListFragmentView_to_addGroceryFragmentView"
+            app:destination="@id/addGroceryFragmentView" />
+    </fragment>
+
 
 </navigation>

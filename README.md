@@ -1,7 +1,7 @@
 # Kwanso_Task
 initial job code base interview session . including custom assignment task from Kwanso Software House
 including
-- SQLITE datbase
+- SQLITE database
 - material design 
 - navgraph (for fragment)
 - bubbletabbar for bottom tabs  ref => https://android-arsenal.com/details/1/7841
